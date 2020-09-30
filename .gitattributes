@@ -1,2 +1,27 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+ipython activate
+import os
+import csv
+csvpath = os.path.join('budget_data.csv')
+with open (csvpath, 'r') as csvfile:
+
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    print(csvreader)
+
+    total_months=[]
+    total_profit=[]
+    profit=[]
+    profit_change=[]
+    average_change=[]
+
+
+    for row in csvreader:
+
+        total_months.append(row[0])
+
+        total_profit.append((int)row[1]))
+
+        i=0
+        for i in range(len(total_profit)-1):
